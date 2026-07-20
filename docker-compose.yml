@@ -1,0 +1,22 @@
+# docker-compose.yml
+# ------------------------------------------------------------------
+# Convenience wrapper around `docker build` + `docker run`.
+# The volume mount below overrides the files copied by the Dockerfile
+# with your live local folder, so edits show up on a browser refresh
+# without rebuilding the image — handy while we're still working
+# through the build steps.
+#
+# Usage:
+#   docker compose up --build     (first run, or after changing Dockerfile)
+#   docker compose up             (subsequent runs)
+#   docker compose down           (stop + remove the container)
+# ------------------------------------------------------------------
+
+services:
+  cafefinder:
+    build: .
+    container_name: cafefinder
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro

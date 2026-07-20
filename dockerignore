@@ -1,0 +1,15 @@
+.git
+.gitignore
+README.md
+*.md
+.DS_Store
+node_modules
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# NOTE: js/config.js is intentionally NOT listed here.
+# Docker builds from your local folder (not from git), so config.js
+# needs to be present locally for the image to include your real API
+# key. It's still excluded from GIT via .gitignore — those are two
+# separate mechanisms.
