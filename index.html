@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CafeFinder — Find the Perfect Cafe Near You</title>
+  <meta
+    name="description"
+    content="Discover top-rated cafes near you with real-time ratings, hours, distance, and directions."
+  />
+
+  <!-- Lightweight inline SVG favicon (no image asset needed) -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E"
+  />
+
+  <!-- Fonts: Fraunces (display) / Inter (body) / JetBrains Mono (data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome (icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- =========================== NAVBAR =========================== -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="CafeFinder home">
+        <svg
+          class="logo-mark"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M4 8h13a3 3 0 0 1 0 6h-1"
+            stroke="#16A34A"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 8v7a4 4 0 0 0 4 4h5a4 4 0 0 0 4-4V8"
+            stroke="#16A34A"
+            stroke-width="1.8"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M7 3c-.5 1 1 1.5.5 3M11 3c-.5 1 1 1.5.5 3"
+            stroke="#F59E0B"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+        </svg>
+        CafeFinder
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html" class="is-active">Home</a></li>
+          <li><a href="#explore">Explore</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode" title="Dark mode (coming in Step 9)">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+
+        <button
+          class="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================== MAIN =========================== -->
+  <main>
+    <!-- Hero section — built in Step 3 (headline, search bar, illustration) -->
+    <section id="hero" class="section-placeholder">
+      &lt;!-- Hero section: Step 3 --&gt;
+    </section>
+
+    <!-- Map + cafe results — built across Steps 4, 5 and 6 -->
+    <section id="explore" class="section-placeholder">
+      &lt;!-- Map (Step 4) + Search (Step 5) + Cafe cards (Step 6) --&gt;
+    </section>
+
+    <!-- About section — light content section, can be filled in during polish (Step 12) -->
+    <section id="about" class="section-placeholder">
+      &lt;!-- About section: Step 12 polish --&gt;
+    </section>
+  </main>
+
+  <!-- =========================== FOOTER =========================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">CafeFinder</span>
+      <p class="footer-copy">&copy; <span id="footer-year"></span> CafeFinder. Built for cafe lovers.</p>
+    </div>
+  </footer>
+
+  <!-- App scripts, loaded as a native ES module -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

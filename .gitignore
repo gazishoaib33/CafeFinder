@@ -1,0 +1,16 @@
+# Environment / secrets
+js/config.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Dependencies (if any dev tooling is added later)
+node_modules/
