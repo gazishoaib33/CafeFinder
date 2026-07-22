@@ -15,11 +15,11 @@
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E"
   />
 
-  <!-- Fonts: Fraunces (display) / Inter (body) / JetBrains Mono (data) -->
+  <!-- Fonts: Bricolage Grotesque (display) / Manrope (body) / Space Mono (data) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet"
   />
 
@@ -45,19 +45,19 @@
         >
           <path
             d="M4 8h13a3 3 0 0 1 0 6h-1"
-            stroke="#16A34A"
+            stroke="#EEC277"
             stroke-width="1.8"
             stroke-linecap="round"
           />
           <path
             d="M4 8v7a4 4 0 0 0 4 4h5a4 4 0 0 0 4-4V8"
-            stroke="#16A34A"
+            stroke="#EEC277"
             stroke-width="1.8"
             stroke-linejoin="round"
           />
           <path
             d="M7 3c-.5 1 1 1.5.5 3M11 3c-.5 1 1 1.5.5 3"
-            stroke="#F59E0B"
+            stroke="#F8EEDD"
             stroke-width="1.6"
             stroke-linecap="round"
           />
@@ -95,9 +95,93 @@
 
   <!-- =========================== MAIN =========================== -->
   <main>
-    <!-- Hero section — built in Step 3 (headline, search bar, illustration) -->
-    <section id="hero" class="section-placeholder">
-      &lt;!-- Hero section: Step 3 --&gt;
+    <!-- Hero section -->
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="eyebrow">
+            <i class="fa-solid fa-compass" aria-hidden="true"></i>
+            Your cafe compass
+          </span>
+
+          <h1 class="hero-title">
+            Find the <span class="hero-title-accent">Perfect Cafe</span> Near You
+          </h1>
+
+          <p class="hero-subtitle">
+            Real-time ratings, hours, and directions for the best coffee shops,
+            bakeries, and workspaces around you — search any city, or use your
+            current location to start exploring.
+          </p>
+
+          <form class="search-bar" id="hero-search-form" novalidate>
+            <div class="search-field">
+              <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+              <label class="sr-only" for="search-input">Search by city, area, zip code, or cafe name</label>
+              <input
+                type="text"
+                id="search-input"
+                class="search-input"
+                placeholder="Search by city, area, zip code, or cafe name"
+                autocomplete="off"
+              />
+            </div>
+
+            <button type="button" id="locate-btn" class="locate-btn">
+              <i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
+              <span>Use My Location</span>
+            </button>
+
+            <button type="submit" class="search-btn">
+              Search
+            </button>
+          </form>
+
+          <p class="search-status" id="search-status" role="status" aria-live="polite"></p>
+
+          <span class="wip-chip">
+            <i class="fa-solid fa-hammer" aria-hidden="true"></i>
+            Live search connects in Step 5 — this is the interface preview
+          </span>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="compass-ring"></div>
+
+          <svg class="compass-needle" viewBox="0 0 100 100" aria-hidden="true">
+            <line x1="50" y1="50" x2="50" y2="14" stroke="var(--color-honey-light)" stroke-width="4" stroke-linecap="round" />
+            <circle cx="50" cy="12" r="7" fill="var(--color-honey-light)" />
+          </svg>
+
+          <div class="compass-hub"></div>
+
+          <div class="float-badge badge-rating">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            4.8 <span class="badge-dot">&middot;</span> 0.4 km
+          </div>
+
+          <div class="cup-card">
+            <svg class="cup-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="50" cy="86" rx="34" ry="5" fill="var(--color-border)" />
+              <path
+                d="M28 46h44l-4 28a10 10 0 0 1-10 9H42a10 10 0 0 1-10-9l-4-28Z"
+                fill="var(--color-surface)"
+                stroke="var(--color-cherry)"
+                stroke-width="3"
+              />
+              <path
+                d="M72 52h6a8 8 0 0 1 0 16h-6"
+                stroke="var(--color-cherry)"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <path class="steam-line s1" d="M40 40c-3-4 3-6 0-10" stroke="var(--color-text-secondary)" stroke-width="2.4" stroke-linecap="round" />
+              <path class="steam-line s2" d="M50 38c-3-4 3-6 0-10" stroke="var(--color-text-secondary)" stroke-width="2.4" stroke-linecap="round" />
+              <path class="steam-line s3" d="M60 40c-3-4 3-6 0-10" stroke="var(--color-text-secondary)" stroke-width="2.4" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Map + cafe results — built across Steps 4, 5 and 6 -->
